@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="es" id="html" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comida para Todos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Esta es la barra despues agregamos las otras cosas y las de uds-->
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container">
+        <a href="#" class="navbar-brand d-flex align-items-center"> 
+          <strong>Álbum de los tipos de Comidas</strong>
+        </a>
+        
+        <button class="btn btn-outline-light ms-auto" id="darkModeButton">Modo Oscuro</button>
+      </div>
+    </div>
+
+    <!-- aqui el menu con todas las categorias despues ya agregamos esto con la base de datos -->
+    <div class="container py-5">
+      <h1 class="display-4 text-center mb-4">Selecciona el Tipo de Comida</h1>
+
+      <div class="d-flex justify-content-center mb-4">
+        <button class="btn btn-primary my-2" id="allButton">Todas las Comidas</button>
+        <button class="btn btn-secondary my-2 ms-3" id="VegetalesButton">Vegetariana</button>
+        <button class="btn btn-success my-2 ms-3" id="ProteinaButton">Proteínas</button>
+        <button class="btn btn-warning my-2 ms-3" id="CutButton">Bajo en Calorías(Cutting)</button>
+        <button class="btn btn-danger my-2 ms-3" id="BulkButton">Altos en Calorías(Bulking)</button>
+      </div>
+
+      <!-- igual en esta parte agregamos base para la parte de la galeria y vemos si agregamso mas galerias con db y posible forma de agregar la receta  -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="foodGallery">
+       
+          <div class="col Vegetariana">
+            <div class="card shadow-sm" data-bs-toggle="modal" data-bs-target="#foodModal" 
+                data-name="Ensalada Vegetariana" data-calories="150" data-protein="5g" data-carbs="20g" data-fat="3g">
+              <img src="https://chantrecords.com/wp-content/uploads/2017/02/500x500.jpg" alt="Ensalada Vegetariana" class="bd-placeholder-img card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Ensalada Vegetariana</h5>
+                <p class="card-text">muchos vegetales.</p>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col Proteina">
+            <div class="card shadow-sm" data-bs-toggle="modal" data-bs-target="#foodModal" 
+                data-name="Pollo a la Parrilla" data-calories="150" data-protein="5g" data-carbs="20g" data-fat="3g">
+              <img src="https://chantrecords.com/wp-content/uploads/2017/02/500x500.jpg" alt="Pollo a la Parrilla" class="bd-placeholder-img card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Pollo a la Parrilla</h5>
+                <p class="card-text">Alta en proteínas, ideal para el desarrollo muscular.</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col Cut">
+            <div class="card shadow-sm" data-bs-toggle="modal" data-bs-target="#foodModal" 
+                data-name="Ensalada Baja en Calorías" data-calories="150" data-protein="5g" data-carbs="20g" data-fat="3g">
+              <img src="https://chantrecords.com/wp-content/uploads/2017/02/500x500.jpg" alt="Ensalada Baja en Calorías" class="bd-placeholder-img card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Ensalada Baja en Calorías</h5>
+                <p class="card-text">Baja en calorías, ideal para dietas controladas.</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col Bulk">
+            <div class="card shadow-sm" data-bs-toggle="modal" data-bs-target="#foodModal" 
+                data-name="Bistec de Res" data-calories="150" data-protein="5g" data-carbs="20g" data-fat="3g">
+              <img src="https://chantrecords.com/wp-content/uploads/2017/02/500x500.jpg" alt="Bistec de Res" class="bd-placeholder-img card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Bistec de Res</h5>
+                <p class="card-text">Alta en calorías, ideal para ganar masa muscular.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!--el modal de la tabla esta de calorias y lo otro  -->
+    <div class="modal fade" id="foodModal" tabindex="-1" aria-labelledby="foodModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="foodModalLabel">Información Nutricional</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <h5 id="foodName"></h5>
+            <ul>
+              <li><strong>Calorías:</strong> <span id="FoodCalorias"></span></li>
+              <li><strong>Proteínas:</strong> <span id="FoodProteinas"></span></li>
+              <li><strong>Carbohidratos:</strong> <span id="FoodCarbos"></span></li>
+              <li><strong>Grasas:</strong> <span id="FoodGrasa"></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle con Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para los botones  -->
+    <script>
+  
+      document.getElementById('allButton').addEventListener('click', function() {
+        showAllCategories();
+      });
+
+      document.getElementById('VegetalesButton').addEventListener('click', function() {
+        showCategory('Vegetariana');
+      });
+
+      document.getElementById('ProteinaButton').addEventListener('click', function() {
+        showCategory('Proteina');
+      });
+
+      document.getElementById('CutButton').addEventListener('click', function() {
+        showCategory('Cut');
+      });
+
+      document.getElementById('BulkButton').addEventListener('click', function() {
+        showCategory('Bulk');
+      });
+
+
+
+      function showCategory(category) {
+        const categories = ['Vegetariana', 'Proteina', 'Cut', 'Bulk'];
+        categories.forEach(function(cat) {
+          const elements = document.querySelectorAll('.' + cat);
+          elements.forEach(function(element) {
+            if (cat === category) {
+              element.style.display = 'block';
+            } else {
+              element.style.display = 'none';
+            }
+          });
+        });
+      }
+
+      function showAllCategories() {
+        const categories = ['Vegetariana', 'Proteina', 'Cut', 'Bulk'];
+        categories.forEach(function(cat) {
+          const elements = document.querySelectorAll('.' + cat);
+          elements.forEach(function(element) {
+            element.style.display = 'block';
+          });
+        });
+      }
+      showAllCategories();
+
+      // botom de Modo Oscuro
+      const darkModeButton = document.getElementById('darkModeButton');
+      darkModeButton.addEventListener('click', function() {
+        const currentTheme = document.documentElement.getAttribute('data-bs-theme');
+        if (currentTheme === 'light') {
+          document.documentElement.setAttribute('data-bs-theme', 'dark');
+          darkModeButton.textContent = 'Modo Claro';
+        } else {
+          document.documentElement.setAttribute('data-bs-theme', 'light');
+          darkModeButton.textContent = 'Modo Oscuro';
+        }
+      });
+
+      
+      const foodModal = document.getElementById('foodModal');
+      foodModal.addEventListener('show.bs.modal', function(event) {
+        const button = event.relatedTarget;
+        const foodName = button.getAttribute('data-name');
+        const foodCalories = button.getAttribute('data-calories');
+        const foodProtein = button.getAttribute('data-protein');
+        const foodCarbs = button.getAttribute('data-carbs');
+        const foodFat = button.getAttribute('data-fat');
+
+        document.getElementById('foodName').textContent = foodName;
+        document.getElementById('FoodCalorias').textContent = foodCalories;
+        document.getElementById('FoodProteinas').textContent = foodProtein;
+        document.getElementById('FoodCarbos').textContent = foodCarbs;
+        document.getElementById('FoodGrasa').textContent = foodFat;
+      });
+    </script>
+  </body>
+</html>
