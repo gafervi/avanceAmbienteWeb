@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyBalance - Menú Lateral</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style_menu.css">
+</head>
+<body>
+  <!-- Llamado de la sidebar -->
+  <div id="sidebar-container"></div>
+  <script>
+    fetch('sidebar.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('sidebar-container').innerHTML = html;
+        // Aqui se agrega la clase 'active' al enlace que se quiera se usa el id por si acaso y se tiene que poner en todos para que salga lo azul
+        document.getElementById('home-link').classList.add('active');
+      })
+      .catch(error => console.error('Error al cargar el sidebar:', error));
+  </script>
+
+<!-- Lo que va arriba que no se mueve -->
+  <div class="navbar navbar-dark bg-dark shadow-sm" style="margin-left: 250px;">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <strong>Menu</strong>
+      </a>
+    </div>
+  </div>
+  <!-- Esto ya es menu -->
+  <div class="content">
+    <h1>Bienvenido a MyBalance</h1>
+    <p>Usa la barra lateral para navegar a través de las opciones disponibles.</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
