@@ -1,40 +1,38 @@
 body {
-    background-color: #2e2e2e; /* Gris medio oscuro */
-    color: #f8f9fa; /* Texto claro para contraste */
-    padding-top: 60px; /* Espacio para que no se solape con el menú superior */
-    margin: 0; /* Eliminar márgenes */
-    height: 100vh; /* Hacer que el body ocupe el 100% de la altura */
-    overflow-x: hidden; /* Deshabilitar desplazamiento horizontal */
+    color: #f8f9fa; 
+    padding-top: 60px;
+    margin: 0; 
+    height: 100vh; 
+    overflow-x: hidden; 
   }
   
   main {
-    background-color: #383838; /* Fondo ligeramente más claro para el contenido */
+    background-color: #494949f0; 
     border-radius: 8px;
     padding: 20px;
-    margin-top: 20px; /* Espacio desde el menú */
-    margin-right: 20px; /* Espacio adicional en el lado derecho */
-    min-height: calc(100vh - 60px); /* Asegura que el contenido ocupe toda la pantalla menos el menú superior */
-    overflow-y: auto; /* Permitir desplazamiento vertical */
+    margin-top: 20px; 
+    margin-right: 20px; 
+    min-height: calc(100vh - 60px); 
+    overflow-y: auto; 
   }
   
   .navbar {
-    position: fixed; /* Fijar el menú superior */
+    position: fixed; 
     top: 0;
-    left: 250px; /* Moverlo a la derecha del menú lateral */
-    width: 100%; /* Asegurar que ocupe todo el ancho */
-    z-index: 9999; /* Asegurar que esté por encima de otros elementos */
+    left: 250px; 
+    width: 100%; 
+    z-index: 10000; 
   }
   
   .table {
-    color: #f8f9fa; /* Texto claro dentro de la tabla */
+    color: #f8f9fa; 
   }
   
   .table th, .table td {
-    border-color: #4a4a4a; /* Bordes oscuros para la tabla */
+    border-color: #292929; 
   }
   
-  /* Espacio para el menú lateral */
   #sidebar-container {
-    margin-top: 60px; /* Asegura que no se solape con el menú */
+    margin-top: 60px; 
   }
   

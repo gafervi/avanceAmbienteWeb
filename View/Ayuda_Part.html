@@ -7,76 +7,47 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style_menu.css">
 </head>
-<body>
-  <div class="sidebar d-flex flex-column flex-shrink-0 p-3 text-bg-dark">
-    <a href="Home.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-      <span class="fs-4">MyBalance</span>
-    </a>
-    <hr>
-    <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="Home.html" class="nav-link text-white" aria-current="page">
-          Home
-        </a>
-      </li>
+<body class="bg-light">
+  <!-- Barra lateral -->
+  <div id="sidebar-container"></div>
+  <script>
+    fetch('sidebar.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('sidebar-container').innerHTML = html;
+      })
+      .catch(error => console.error('Error al cargar el sidebar:', error));
+  </script>
 
-      <li class="nav-item">
-        <a href="#" class="nav-link text-white">
-          Mis finanzas
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a href="#" class="nav-link text-white">
-          Lista de Deseos
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a href="#" class="nav-link text-white">
-          Metas de Ahorro
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="album_Part.html" class="nav-link text-white">
-          Mis facturas
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link text-white">
-          Estadísticas
-        </a>
-      </li>
-
-    </ul>
-    <hr>
-    
-    <div class="dropdown">
-      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="https://i0.wp.com/digitalhealthskills.com/wp-content/uploads/2022/11/3da39-no-user-image-icon-27.png?fit=500%2C500&ssl=1" alt="" width="32" height="32" class="rounded-circle me-2">
-        <strong>User</strong>
-      </a>
-      <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-        <li><a class="dropdown-item" href="Ayuda_Part.html">Ayuda</a></li>
-        <li><a class="dropdown-item" href="#">Settings</a></li>
-        <li><a class="dropdown-item" href="#">Profile</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Sign out</a></li>
-      </ul>
+  <!-- Navbar superior -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm" style="margin-left: 250px;">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">Ayuda</a>
     </div>
-  </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm" style="margin-left: 250px;">
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        <strong>Ayuda</strong>
-      </a>
-    </div>
-  </div>
-  <!-- Esto ya es menu -->
-  <div class="content">
-    <h1>Bienvenido a MyBalance</h1>
-    <h2>si tienes problemas o ocupas ayuda en algun apartado puedes escribirnos o mandarnos un correo.</h2>
-    <p>Telefono:9999-9999 o a nuestros correo MyBalanceHelp@gmail.com - MyBalanceWeb@gmail.com </p>
+  </nav>
 
+  <!-- Contenido principal -->
+  <div class="container" style="margin-left: 250px; margin-top: 80px;">
+    <div class="card shadow-lg" style="background-color: #494949f0; border-radius: 12px;">
+      <div class="card-header text-white" style="background-color: #343a40; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+        <h1 class="h4 mb-0">Bienvenido a MyBalance </h1>
+      </div>
+      <div class="card-body text-white">
+        <h2 class="h5">Si tienes problemas o necesitas ayuda en algún apartado, puedes escribirnos o enviarnos un correo.</h2>
+        <p class="mt-3">
+          <strong>Teléfono:</strong> 9999-9999 <br>
+          <strong>Correo:</strong> 
+          <a href="mailto:MyBalanceHelp@gmail.com" class="text-white text-decoration-underline">MyBalanceHelp@gmail.com</a>, 
+          <a href="mailto:MyBalanceWeb@gmail.com" class="text-white text-decoration-underline">MyBalanceWeb@gmail.com</a>
+        </p>
+        <div class="mt-4">
+          <a href="#" class="btn btn-outline-info">Llamanos</a>
+          <a href="mailto:MyBalanceHelp@gmail.com" class="btn btn-outline-light">Enviar Correo</a>
+          <a href="https://wa.me/+50688721679" class="btn btn-outline-success">Escríbenos por WhatsApp</a>
+
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
