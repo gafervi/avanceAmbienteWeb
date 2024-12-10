@@ -1,26 +1,26 @@
 <div class="sidebar d-flex flex-column flex-shrink-0 p-3 text-bg-dark">
-    <a href="Home.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <a href="Home.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
       <span class="fs-4">MyBalance</span>
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
   <li class="nav-item">
-    <a href="Home.html" class="nav-link text-white" id="home-link">Home</a>
+    <a href="Home.php" class="nav-link text-white" id="home-link">Home</a>
   </li>
   <li class="nav-item">
-    <a href="finanzas_Part.html" class="nav-link text-white" id="finanzas-link">Mis Finanzas</a>
+    <a href="finanzas_Part.php" class="nav-link text-white" id="finanzas-link">Mis Finanzas</a>
   </li>
   <li class="nav-item">
-    <a href="deseos_Part.html" class="nav-link text-white" id="lista-deseos-link">Lista de Deseos</a>
+    <a href="deseos_Part.php" class="nav-link text-white" id="lista-deseos-link">Lista de Deseos</a>
   </li>
   <li class="nav-item">
-    <a href="Calculadora_Ahorros_Part.html" class="nav-link text-white" id="metas-ahorro-link">Metas de Ahorro</a>
+    <a href="Calculadora_Ahorros_Part.php" class="nav-link text-white" id="metas-ahorro-link">Metas de Ahorro</a>
   </li>
   <li class="nav-item">
-    <a href="album_Part.html" class="nav-link text-white" id="facturas-link">Mis Facturas</a>
+    <a href="album_Part.php" class="nav-link text-white" id="facturas-link">Mis Facturas</a>
   </li>
   <li class="nav-item">
-    <a href="Estadisticas_Part.html" class="nav-link text-white" id="estadisticas-link">Estadísticas</a>
+    <a href="Estadisticas_Part.php" class="nav-link text-white" id="estadisticas-link">Estadísticas</a>
   </li>
 </ul>
     <hr>
@@ -31,9 +31,9 @@
         <strong>User</strong>
       </a>
       <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-        <li><a class="dropdown-item" href="Ayuda_Part.html">Ayuda</a></li>
-        <li><a class="dropdown-item" href="Settings_Part.html">Settings</a></li>
-        <li><a class="dropdown-item" href="Profile_Part.html">Profile</a></li>
+        <li><a class="dropdown-item" href="Ayuda_Part.php">Ayuda</a></li>
+        <li><a class="dropdown-item" href="Settings_Part.php">Settings</a></li>
+        <li><a class="dropdown-item" href="Profile_Part.php">Profile</a></li>
         <li><hr class="dropdown-divider"></li>
         <li><a class="dropdown-item" href="#">Sign out</a></li>
       </ul>

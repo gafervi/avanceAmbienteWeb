@@ -12,7 +12,7 @@
   <!-- Sidebar -->
   <div id="sidebar-container"></div>
   <script>
-    fetch('sidebar.html')
+    fetch('sidebar.php')
       .then(response => response.text())
       .then(html => {
         document.getElementById('sidebar-container').innerHTML = html;
