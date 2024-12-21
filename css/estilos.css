@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Main container styling */
+.welcomeContainer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.welcomeContainer h1 {
+    font-size: 2rem;
+    color: #343a40;
+}
+
+/* Sidebar styling */
+aside {
+    position: absolute;
+    top: 80px;
+    /* Below the header */
+    left: 0;
+    width: 200px;
+    height: calc(100% - 80px);
+    background-color: #343a40;
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.asideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.asideContainer a {
+    text-decoration: none;
+    color: #f8f9fa;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.asideContainer a:hover {
+    background-color: #495057;
+}
+
+/* Main content styling */
+.mainContent {
+    margin-left: 220px;
+    /* Space for the sidebar */
+    padding: 30px;
+}
+
+.moneyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+.moneyContainer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #343a40;
+}
+
+.moneyContainer p {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color: #495057;
+}
+
+.moneyContainer .total {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #007bff;
+}
+
+
+.chart-container {
+    width: 350px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.chart-legend {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.chart-legend li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.color-box {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.total-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.imgsContainer {
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.finanzas_Img {
+    width: 67%;
+    height: auto;
+}
